@@ -46,7 +46,8 @@ namespace _18_游曉雯_HomeWork
             int a =int.Parse(textBox1.Text);
             int b = int.Parse(textBox2.Text);
             double ans = a / b;
-            label4.Text = ans.ToString();
+
+            label4.Text = Convert.ToString(Math.Round(ans));
         }
     }
 }

@@ -22,19 +22,23 @@ namespace _18_游曉雯_HomeWork
         string f = "";
         private void Form5_Load(object sender, EventArgs e)
         {
-           string f= $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
-            label6.Text = f;
+            label5.Enabled = false;
+            //string f= $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
+            // label6.Text = f;
             /*"舉例:\r\n\t測試";*/
 
         }
         Dictionary<int, int> mykey = new Dictionary<int, int>();
         List<int> showRange = new List<int>();
         List<MyClass2> Mylist = new List<MyClass2>();
+        List<int> MylistCH = new List<int>();
+        List<int> MylistEH = new List<int>();
+        List<int> MylistMH = new List<int>();
         void showshow()
         {
-           
+
         }
-        public int showh(int x, int y, int z) 
+        public int showh(int x, int y, int z)
         {
             showRange.Add(x);
             showRange.Add(y);
@@ -44,8 +48,8 @@ namespace _18_游曉雯_HomeWork
             return showRange[0];
         }
 
-        public int showlow(int x,int y,int z) 
-        { 
+        public int showlow(int x, int y, int z)
+        {
             showRange.Add(x);
             showRange.Add(y);
             showRange.Add(z);
@@ -55,6 +59,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -62,8 +67,8 @@ namespace _18_游曉雯_HomeWork
             num.EMath = int.Parse(textBox4.Text);
             Mylist.Add(num);
             //showshow();
-            int low=showlow(num.EChi, num.Eng, num.EMath);
-            int lh=showh(num.EChi, num.Eng, num.EMath);
+            int low = showlow(num.EChi, num.Eng, num.EMath);
+            int lh = showh(num.EChi, num.Eng, num.EMath);
             string result = "";
 
             foreach (var item in Mylist)
@@ -77,7 +82,7 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}{showRange.IndexOf(num.EChi)}\n";
+                result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}\n";
             }
 
             label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
@@ -118,7 +123,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -150,7 +155,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -180,6 +185,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button4_Click(object sender, EventArgs e)
         {
+            label5.Enabled = false;
             label6.Text = "";
             MyClass2 num;
             num.EName = "";
@@ -190,74 +196,153 @@ namespace _18_游曉雯_HomeWork
 
         private void button5_Click(object sender, EventArgs e)
         {
+            label5.Enabled = true;
+           
             //string r1 = "abcdefgh";
-            //int i=r1.IndexOf("c");//a=0 b=1 c=2
+            //int i = r1.IndexOf("c");//a=0 b=1 c=2
             //MessageBox.Show(i.ToString());
 
-            List<int> kk = new List<int>();
-            
-            kk.Add(30);
-            kk.Add(50);
-            kk.Add(20);
-            int j = kk.IndexOf(1); //0=-1,1=0,2=1,3=2 顯示數字在陣列中的位子,找不到就為-1
+            string cs = textBox5.Text;
+            //int tt = MylistCH.IndexOf(int.Parse(cs));
+            //MessageBox.Show(tt.ToString());
+
+            foreach (var item in Mylist)
+            {                
+                MylistCH.Add(item.EChi);
+                
+            }
+            //foreach (var item in MylistCH)
+            //{
+            //    MessageBox.Show(item.ToString());
+            //}
+            int tt = MylistCH.IndexOf(int.Parse(cs));
+            MessageBox.Show(tt.ToString());
+            string result = "";
+            if (tt>=0)
+            {
+                for (int i = 0; i < Mylist.Count; i++)
+                {
+                    if (tt==0)
+                    {
+                        string ggname=Mylist[0].EName;
+                        int ggchi = Mylist[0].EChi;
+                        int ggeng = Mylist[0].Eng;
+                        int ggmat = Mylist[0].EMath;
+                        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+                    }
+                    else if(tt == 1)
+                    {
+                        string ggname = Mylist[1].EName;
+                        int ggchi = Mylist[1].EChi;
+                        int ggeng = Mylist[1].Eng;
+                        int ggmat = Mylist[1].EMath;
+                        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("找不到值,請重新輸入");
+            }
+
+            //List<int> kk = new List<int>();
+            //kk.Add(10);
+            //kk.Add(2);
+            //kk.Add(3);
+            //int j = kk.IndexOf(1); //0=-1,1=0,2=1,3=2 顯示數字在陣列中的位子,找不到就為-1
+            //int j = kk.IndexOf(int.Parse(cs));
             //MessageBox.Show(j.ToString());
 
             //int low = showlow(20,30,50);
             //int lh = showh(50,30,20);
-            int m = kk.IndexOf(30);
+            //int m = kk.IndexOf(30);
             //int n = kk.LastIndexOf(20);
-            
-            switch (m)
-            {
-                case 0:
-                string chi = "國文";
-                    MessageBox.Show(chi);
-                    break;
-                case 1:
-                    string eng = "英文";
-                    MessageBox.Show(eng);
-                    break;
-                case 2:
-                    string ma = "數學";
-                    MessageBox.Show(ma);
-                    break;
-                default:
-                    break;
-            
-            }MessageBox.Show(m.ToString());
 
-            
-
-            //string result = "";
-            //MyClass2 num;
-            //num.EName = textBox1.Text;
-            //num.EChi = int.Parse(textBox2.Text);
-            //num.Eng = int.Parse(textBox3.Text);
-            //num.EMath = int.Parse(textBox4.Text);
-            //int s1 = int.Parse(textBox5.Text);
-            //int s2 = int.Parse(textBox6.Text);
-            //int low = showlow(num.EChi, num.Eng, num.EMath);
-            //int lh = showh(num.EChi, num.Eng, num.EMath);
-            //{showRange.IndexOf(10)},
-            //foreach (var item in Mylist)
+            //switch (m)
             //{
-            //    showRange.Add(item.EChi);
-            //    showRange.Add(item.Eng);
-            //    showRange.Add(item.EMath);
-            //    int s3=showRange.IndexOf(s1);
-            //    if (s3==0)
-            //    {
-            //            int avg = 0;
-            //            int atotal = 0;
+            //    case 0:
+            //        string chi = "國文";
+            //        MessageBox.Show(chi);
+            //        break;
+            //    case 1:
+            //        string eng = "英文";
+            //        MessageBox.Show(eng);
+            //        break;
+            //    case 2:
+            //        string ma = "數學";
+            //        MessageBox.Show(ma);
+            //        break;
+            //    default:
+            //        break;
 
-            //            atotal = item.EChi + item.Eng + item.EMath;
-            //            avg = atotal / 3;
-            //            result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},\n";
-
-
-            //        label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
-            //    }
             //}
+            //MessageBox.Show(m.ToString());
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            label5.Enabled = false;
+            int totalchi = 0;
+            int totaleng = 0;
+            int totalmath = 0;
+            int avgchi = 0;
+            int avgeng = 0;
+            int avgmath = 0;
+            int tavgc = 0;
+            string lb8t = "";//各科總分
+            string lb8a = "";//平均
+            foreach (var item in Mylist)
+            {
+                totalchi += item.EChi;
+                totaleng += item.Eng;
+                totalmath += item.EMath;
+                MylistCH.Add(item.EChi);
+                MylistEH.Add(item.Eng);
+                MylistMH.Add(item.EMath);
+            }
+            avgchi = totalchi / 3;
+            avgeng = totaleng / 3;
+            avgmath = totalmath / 3;
+            lb8t += $"總分\t{totalchi,a}{totaleng,a}{totalmath,a}\n";
+            lb8a += $"平均\t{avgchi,a}{avgeng,a}{avgmath,a}\n";
+            foreach (var item in Mylist)
+            {
+                MylistCH.Add(item.EChi);
+            }
+            int chiL = 0;
+            int enL = 0;
+            int maL = 0;
+            int chiH = 0;
+            int enH = 0;
+            int maH = 0;
+
+            MylistCH.Sort();        
+            chiL = MylistCH[0];
+            MylistCH.Sort();
+            MylistCH.Reverse();
+            chiH = MylistCH[0];
+
+            MylistEH.Sort();
+            enL = MylistEH[0];
+            MylistEH.Sort();
+            MylistEH.Reverse();
+            enH = MylistEH[0];
+
+            MylistMH.Sort();
+            maL = MylistMH[0];
+            MylistMH.Reverse();
+            MylistMH.Sort();
+            maH = MylistMH[0];
+
+            string lb8L = "";//最低分
+            lb8L += $"最低分\t{chiL,a}{enL,a}{maL,a}\n";
+            string lb8H = "";
+            lb8H += $"最高分\t{chiH,a}{enH,a}{maH,a}";
+            
+            label8.Text = lb8t + lb8a+ lb8L+ lb8H;
+
+
         }
     }
 }
