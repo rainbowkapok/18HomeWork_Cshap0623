@@ -239,9 +239,9 @@ namespace _18_游曉雯_HomeWork
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(224, 22);
+            this.label5.Location = new System.Drawing.Point(238, 289);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(759, 103);
+            this.label5.Size = new System.Drawing.Size(734, 103);
             this.label5.TabIndex = 33;
             // 
             // Form5

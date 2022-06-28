@@ -11,11 +11,11 @@ namespace _18_游曉雯_HomeWork
     }
     public struct MyClass2
     {
-        public string EName;
-        public int EChi;
-        public int Eng;
-        public int EMath;
-        
+        public string EName { get; set; }
+        public int EChi { get; set; }
+        public int Eng { get; set; }
+        public int EMath { get; set; }
+
     }
     public enum MyEnum :int
     {

@@ -38,6 +38,7 @@ namespace _18_游曉雯_HomeWork
         {
 
         }
+        
         public int showh(int x, int y, int z)
         {
             showRange.Add(x);
@@ -59,7 +60,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MyClass2 num;
+            MyClass2 num=new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -122,7 +123,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MyClass2 num;
+            MyClass2 num=new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -153,7 +154,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MyClass2 num;
+            MyClass2 num = new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -182,10 +183,10 @@ namespace _18_游曉雯_HomeWork
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+            MyClass2 num = new MyClass2();
             label6.Text = "";
             label8.Text = "";
-            MyClass2 num;
+            
             num.EName = "";
             num.EChi = 0;
             num.Eng = 0;
@@ -201,8 +202,8 @@ namespace _18_游曉雯_HomeWork
             //int tt = MylistCH.IndexOf(int.Parse(cs));
             //MessageBox.Show(tt.ToString());
             //label5.Enabled = true;
-            label6.Text = "";
-            label8.Text = "";
+            /*https://ithelp.ithome.com.tw/articles/10227210*/
+
             label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             string cs = textBox5.Text;
@@ -219,6 +220,24 @@ namespace _18_游曉雯_HomeWork
             int dd = MylistCH.IndexOf(int.Parse(ch));
             //MessageBox.Show(tt.ToString());
             string result = "";
+            //IndexOf<T>(T[], T, Int32)
+
+            //for (int i = 0; i < Mylist.Count; i++)
+            //{
+            //    if (tt == i)
+            //    {
+            //        //Mylist.IndexOf(Mylist[i], i, i);
+
+            //        //MessageBox.Show(Mylist.IndexOf(Mylist[i], i, i).ToString());
+            //        string ggname = Mylist[i].EName;
+            //        int ggchi = Mylist[i].EChi;
+            //        int ggeng = Mylist[i].Eng;
+            //        int ggmat = Mylist[i].EMath;
+            //        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+            //        result += $"{ggname},{ggchi},{ggeng},{ggmat}";
+            //    }
+            //}
+
             if (int.Parse(ch) > int.Parse(cs))
             {
                 if (tt >= 0)
