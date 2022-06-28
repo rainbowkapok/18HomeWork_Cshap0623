@@ -22,7 +22,7 @@ namespace _18_游曉雯_HomeWork
         string f = "";
         private void Form5_Load(object sender, EventArgs e)
         {
-            label5.Enabled = false;
+            
             //string f= $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
             // label6.Text = f;
             /*"舉例:\r\n\t測試";*/
@@ -59,7 +59,6 @@ namespace _18_游曉雯_HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -123,7 +122,6 @@ namespace _18_游曉雯_HomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -155,7 +153,6 @@ namespace _18_游曉雯_HomeWork
 
         private void button3_Click(object sender, EventArgs e)
         {
-            label5.Enabled = false;
             MyClass2 num;
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -185,8 +182,9 @@ namespace _18_游曉雯_HomeWork
 
         private void button4_Click(object sender, EventArgs e)
         {
-            label5.Enabled = false;
+            
             label6.Text = "";
+            label8.Text = "";
             MyClass2 num;
             num.EName = "";
             num.EChi = 0;
@@ -202,10 +200,15 @@ namespace _18_游曉雯_HomeWork
 
             //int tt = MylistCH.IndexOf(int.Parse(cs));
             //MessageBox.Show(tt.ToString());
-            label5.Enabled = true;
-           
+            //label5.Enabled = true;
+            label6.Text = "";
+            label8.Text = "";
+            label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
             string cs = textBox5.Text;
             string ch = textBox6.Text;
+            
+
             foreach (var item in Mylist)
             {                
                 MylistCH.Add(item.EChi);
@@ -213,33 +216,36 @@ namespace _18_游曉雯_HomeWork
             }
             
             int tt = MylistCH.IndexOf(int.Parse(cs));
-            MessageBox.Show(tt.ToString());
+            int dd = MylistCH.IndexOf(int.Parse(ch));
+            //MessageBox.Show(tt.ToString());
             string result = "";
-            if (tt>=0)
+            if (int.Parse(ch) > int.Parse(cs))
             {
-                for (int i = 0; i < Mylist.Count; i++)
+                if (tt >= 0)
                 {
-                    if (tt==i)
+                    for (int i = 0; i < Mylist.Count; i++)
                     {
-                        string ggname=Mylist[i].EName;
-                        int ggchi = Mylist[i].EChi;
-                        int ggeng = Mylist[i].Eng;
-                        int ggmat = Mylist[i].EMath;
-                        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+                        if (tt == i)
+                        {
+                            string ggname = Mylist[i].EName;
+                            int ggchi = Mylist[i].EChi;
+                            int ggeng = Mylist[i].Eng;
+                            int ggmat = Mylist[i].EMath;
+                            //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+                            result += $"{ggname},{ggchi},{ggeng},{ggmat}";
+                        }
                     }
-                    else if(tt == i)
-                    {
-                        string ggname = Mylist[i].EName;
-                        int ggchi = Mylist[i].EChi;
-                        int ggeng = Mylist[i].Eng;
-                        int ggmat = Mylist[i].EMath;
-                        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
-                    }
+                    label5.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+                    label5.Enabled = Visible;
+                }
+                else
+                {
+                    MessageBox.Show("找不到值,請重新輸入");
                 }
             }
             else
             {
-                MessageBox.Show("找不到值,請重新輸入");
+                MessageBox.Show("找不到值,請重新輸入(搜尋值左欄填小，右欄填大)，謝謝!");
             }
 
             //List<int> kk = new List<int>();
@@ -280,7 +286,6 @@ namespace _18_游曉雯_HomeWork
 
         private void button6_Click(object sender, EventArgs e)
         {
-            label5.Enabled = false;
             int totalchi = 0;
             int totaleng = 0;
             int totalmath = 0;
