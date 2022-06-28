@@ -196,25 +196,22 @@ namespace _18_游曉雯_HomeWork
 
         private void button5_Click(object sender, EventArgs e)
         {
-            label5.Enabled = true;
-           
             //string r1 = "abcdefgh";
             //int i = r1.IndexOf("c");//a=0 b=1 c=2
             //MessageBox.Show(i.ToString());
 
-            string cs = textBox5.Text;
             //int tt = MylistCH.IndexOf(int.Parse(cs));
             //MessageBox.Show(tt.ToString());
-
+            label5.Enabled = true;
+           
+            string cs = textBox5.Text;
+            string ch = textBox6.Text;
             foreach (var item in Mylist)
             {                
                 MylistCH.Add(item.EChi);
                 
             }
-            //foreach (var item in MylistCH)
-            //{
-            //    MessageBox.Show(item.ToString());
-            //}
+            
             int tt = MylistCH.IndexOf(int.Parse(cs));
             MessageBox.Show(tt.ToString());
             string result = "";
@@ -222,20 +219,20 @@ namespace _18_游曉雯_HomeWork
             {
                 for (int i = 0; i < Mylist.Count; i++)
                 {
-                    if (tt==0)
+                    if (tt==i)
                     {
-                        string ggname=Mylist[0].EName;
-                        int ggchi = Mylist[0].EChi;
-                        int ggeng = Mylist[0].Eng;
-                        int ggmat = Mylist[0].EMath;
+                        string ggname=Mylist[i].EName;
+                        int ggchi = Mylist[i].EChi;
+                        int ggeng = Mylist[i].Eng;
+                        int ggmat = Mylist[i].EMath;
                         MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
                     }
-                    else if(tt == 1)
+                    else if(tt == i)
                     {
-                        string ggname = Mylist[1].EName;
-                        int ggchi = Mylist[1].EChi;
-                        int ggeng = Mylist[1].Eng;
-                        int ggmat = Mylist[1].EMath;
+                        string ggname = Mylist[i].EName;
+                        int ggchi = Mylist[i].EChi;
+                        int ggeng = Mylist[i].Eng;
+                        int ggmat = Mylist[i].EMath;
                         MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
                     }
                 }
@@ -246,6 +243,7 @@ namespace _18_游曉雯_HomeWork
             }
 
             //List<int> kk = new List<int>();
+
             //kk.Add(10);
             //kk.Add(2);
             //kk.Add(3);
