@@ -10,11 +10,17 @@ namespace _18_游曉雯_HomeWork
     {
     }
 
-    public struct MyClass 
+    public class MyClass 
     {
-        public string Name { get; set; }
-        public int Chinese { get; set; }
-        public int English { get; set; }
-        public int Math { get; set; }
+        public string Name;
+        public int ChineseScore { get; set; }
+        public int EnglishScore { get; set; }
+        public int MathScore { get; set; }
+
+        
+        //public int CompareTo(MyClass x, MyClass y)
+        //{
+        //    return x.ChineseScore.CompareTo(y.EnglishScore);
+        //}
     }
 }
