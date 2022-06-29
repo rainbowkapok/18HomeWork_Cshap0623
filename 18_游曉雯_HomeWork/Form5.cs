@@ -17,7 +17,7 @@ namespace _18_游曉雯_HomeWork
             InitializeComponent();
         }
 
-        const int b = 12;
+        const int b = 11;
         const int a = 9;
         string f = "";
         private void Form5_Load(object sender, EventArgs e)
@@ -67,6 +67,27 @@ namespace _18_游曉雯_HomeWork
             num.Eng = int.Parse(textBox3.Text);
             num.EMath = int.Parse(textBox4.Text);
             Mylist.Add(num);
+            string llow = "";
+            string hscore = "";
+            string str1 = "";
+            string str2 = "";
+            string[] subject = new string[] { "國文", "英文", "數學" };
+            int[] score = new int[] { num.EChi, num.Eng, num.EMath };
+            Array.Sort(score, subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i]+score[i]);
+                llow = subject[0] + score[0];
+            }
+            str1 = llow;
+            Array.Reverse(score);
+            Array.Reverse(subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i] + score[i]);
+                hscore = subject[0] + score[0];
+            }
+            str2 = hscore;
             //showshow();
             int low = showlow(num.EChi, num.Eng, num.EMath);
             int lh = showh(num.EChi, num.Eng, num.EMath);
@@ -83,16 +104,13 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}\n";
+                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
             }
             int mm = 0;
-            label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+            label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
 
-            string [] y = {"國文","英文","數學"};
             
 
-          
-           
 
             //MyEnum ECnum = MyEnum.國文;
             //MyEnum EEnum = MyEnum.英文;
@@ -140,6 +158,27 @@ namespace _18_游曉雯_HomeWork
             int low = showlow(num.EChi, num.Eng, num.EMath);
             int lh = showh(num.EChi, num.Eng, num.EMath);
             Mylist.Insert(0, num);
+            string llow = "";
+            string hscore = "";
+            string str1 = "";
+            string str2 = "";
+            string[] subject = new string[] { "國文", "英文", "數學" };
+            int[] score = new int[] { num.EChi, num.Eng, num.EMath };
+            Array.Sort(score, subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i]+score[i]);
+                llow = subject[0] + score[0];
+            }
+            str1 = llow;
+            Array.Reverse(score);
+            Array.Reverse(subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i] + score[i]);
+                hscore = subject[0] + score[0];
+            }
+            str2 = hscore;
             //showshow();
             string result = "";
 
@@ -154,16 +193,16 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}\n";
+                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
             }
 
-            label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+            label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MyClass2 num = new MyClass2();
+            MyClass2 num=new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -171,6 +210,27 @@ namespace _18_游曉雯_HomeWork
             int low = showlow(num.EChi, num.Eng, num.EMath);
             int lh = showh(num.EChi, num.Eng, num.EMath);
             Mylist.RemoveAt(0);
+            string llow = "";
+            string hscore = "";
+            string str1 = "";
+            string str2 = "";
+            string[] subject = new string[] { "國文", "英文", "數學" };
+            int[] score = new int[] { num.EChi, num.Eng, num.EMath };
+            Array.Sort(score, subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i]+score[i]);
+                llow = subject[0] + score[0];
+            }
+            str1 = llow;
+            Array.Reverse(score);
+            Array.Reverse(subject);
+            for (int i = 0; i < subject.Length; i++)
+            {
+                //MessageBox.Show(subject[i] + score[i]);
+                hscore = subject[0] + score[0];
+            }
+            str2 = hscore;
             string result = "";
 
             foreach (var item in Mylist)
@@ -184,10 +244,12 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}\n";
+                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
             }
 
-            label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+            label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
