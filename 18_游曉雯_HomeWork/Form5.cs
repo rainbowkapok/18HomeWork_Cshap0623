@@ -17,7 +17,7 @@ namespace _18_游曉雯_HomeWork
             InitializeComponent();
         }
 
-        const int b = 11;
+        const int b = 12;
         const int a = 9;
         string f = "";
         private void Form5_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace _18_游曉雯_HomeWork
         List<int> MylistMH = new List<int>();
         void showshow()
         {
-
+           
         }
         
         public int showh(int x, int y, int z)
@@ -60,6 +60,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label5.Visible = false;
             MyClass2 num=new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -84,8 +85,15 @@ namespace _18_游曉雯_HomeWork
                 avg = atotal / 3;
                 result += $"{item.EName,b},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{low,b},{lh,b}\n";
             }
-
+            int mm = 0;
             label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+
+            string [] y = {"國文","英文","數學"};
+            
+
+          
+           
+
             //MyEnum ECnum = MyEnum.國文;
             //MyEnum EEnum = MyEnum.英文;
             //MyEnum EMnum = MyEnum.數學;
@@ -123,6 +131,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label5.Visible = false;
             MyClass2 num=new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
@@ -183,6 +192,8 @@ namespace _18_游曉雯_HomeWork
 
         private void button4_Click(object sender, EventArgs e)
         {
+            label5.Visible = false;
+            label5.Text = "";
             MyClass2 num = new MyClass2();
             label6.Text = "";
             label8.Text = "";
@@ -204,6 +215,9 @@ namespace _18_游曉雯_HomeWork
             //label5.Enabled = true;
             /*https://ithelp.ithome.com.tw/articles/10227210*/
 
+            label6.Text = "";
+            label6.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
+            label5.Visible = true;
             label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
             string cs = textBox5.Text;
@@ -220,23 +234,9 @@ namespace _18_游曉雯_HomeWork
             int dd = MylistCH.IndexOf(int.Parse(ch));
             //MessageBox.Show(tt.ToString());
             string result = "";
+            string result2 = "";
             //IndexOf<T>(T[], T, Int32)
 
-            //for (int i = 0; i < Mylist.Count; i++)
-            //{
-            //    if (tt == i)
-            //    {
-            //        //Mylist.IndexOf(Mylist[i], i, i);
-
-            //        //MessageBox.Show(Mylist.IndexOf(Mylist[i], i, i).ToString());
-            //        string ggname = Mylist[i].EName;
-            //        int ggchi = Mylist[i].EChi;
-            //        int ggeng = Mylist[i].Eng;
-            //        int ggmat = Mylist[i].EMath;
-            //        MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
-            //        result += $"{ggname},{ggchi},{ggeng},{ggmat}";
-            //    }
-            //}
 
             if (int.Parse(ch) > int.Parse(cs))
             {
@@ -251,21 +251,73 @@ namespace _18_游曉雯_HomeWork
                             int ggeng = Mylist[i].Eng;
                             int ggmat = Mylist[i].EMath;
                             //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
-                            result += $"{ggname},{ggchi},{ggeng},{ggmat}";
+                            result += $"{ggname,-6}{ggchi,b}{ggeng,b}{ggmat,b}";
                         }
                     }
-                    label5.Text = $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
+                    
                     label5.Enabled = Visible;
                 }
                 else
                 {
                     MessageBox.Show("找不到值,請重新輸入");
                 }
+
+                if (dd >= 0)
+                {
+                    for (int i = 0; i < Mylist.Count; i++)
+                    {
+                        if (dd == i)
+                        {
+                            string hhname = Mylist[i].EName;
+                            int hhchi = Mylist[i].EChi;
+                            int hheng = Mylist[i].Eng;
+                            int hhmat = Mylist[i].EMath;
+                            //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+                            result2 += $"{hhname,-6}{hhchi,b}{hheng,b}{hhmat,b}";
+                        }
+                    }
+                   
+                    label5.Enabled = Visible;
+                }
+                else
+                {
+                    MessageBox.Show("找不到值,請重新輸入");
+                }
+                ;
+                
             }
             else
             {
                 MessageBox.Show("找不到值,請重新輸入(搜尋值左欄填小，右欄填大)，謝謝!");
             }
+
+            int low = 0;
+            int lh = 0;
+            string result3 = "";
+            foreach (var item in Mylist)
+            {
+                int avg = 0;
+                int atotal = 0;
+                atotal = item.EChi + item.Eng + item.EMath;
+                avg = atotal / 3;
+                showRange.Add(item.EChi);
+                showRange.Add(item.Eng);
+                showRange.Add(item.EMath);
+                showRange.Sort();
+                showRange.Reverse();
+                lh = showRange[0];
+
+                result3 += $"{(atotal).ToString("###"),b}{(avg).ToString("###.##"),b}{low,b}{lh,b}\n";
+            }
+            foreach (var item in Mylist)
+            {
+                showRange.Add(item.EChi);
+                showRange.Add(item.Eng);
+                showRange.Add(item.EMath);
+                showRange.Sort();
+                low = showRange[0];
+            }
+            label5.Text = $"{result}{result3}\n{result2}{result3}\n";
 
             //List<int> kk = new List<int>();
 

@@ -239,10 +239,12 @@ namespace _18_游曉雯_HomeWork
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(238, 289);
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(225, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(734, 103);
+            this.label5.Size = new System.Drawing.Size(758, 79);
             this.label5.TabIndex = 33;
+            this.label5.Visible = false;
             // 
             // Form5
             // 
