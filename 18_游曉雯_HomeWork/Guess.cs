@@ -28,9 +28,11 @@ namespace _18_游曉雯_HomeWork
             
             GuessInput G = new GuessInput();//輸入的表單
             G.Show();
-           label3.Text = G.Gu1.Text;
-            int a = int.Parse(label3.Text);
-           
+            //label3.Text = G.Gu1.Text;
+            // int a = int.Parse(label3.Text);
+            //MessageBox.Show(GuessN.n.ToString());
+            int a = GuessN.n;
+
             while (a >= min && a < max)
             {
                 count += 1;

@@ -25,7 +25,7 @@ namespace _18_游曉雯_HomeWork
         {
             //GuessN newN = new GuessN();
             //newN.num = Convert.ToInt32(Gu1.Text);
-            
+            GuessN.n=int.Parse( Gu1.Text);
            
             //int a = newN.num;
             //while (a >= min && a < max)
