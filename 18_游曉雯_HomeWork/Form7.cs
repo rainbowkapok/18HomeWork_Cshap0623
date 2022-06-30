@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace _18_游曉雯_HomeWork
 {
-    public partial class Form7 : Form
+    public partial class testGuess : Form
     {
-        public Form7()
+        public testGuess()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form7_1 OpenF71 = new Form7_1();
-            OpenF71.Show();
+            //Form7_1 OpenF71 = new Form7_1();
+            //OpenF71.Show();
             
         }
         private void button2_Click(object sender, EventArgs e)

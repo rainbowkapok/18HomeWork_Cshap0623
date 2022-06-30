@@ -22,7 +22,7 @@ namespace _18_游曉雯_HomeWork
         int min = 1;
         private void button1_Click(object sender, EventArgs e)
         {
-            Form7 fon = new Form7();
+            testGuess fon = new testGuess();
             fon.Show();
             //fon.TopLevel = false;
             fon.label1.Text = textBox1.Text;

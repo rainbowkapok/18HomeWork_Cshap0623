@@ -15,12 +15,23 @@ namespace _18_游曉雯_HomeWork
         public int gNum;
         public int min;
         public int max;
+        public int ber;
+        public int num
+        {
+            get { return ber; }
+            set
+            {
+                ber = value;
+            }
+        }
     }
-//int aa=0;
-//    public int gNuma
-//    {
-       
-//        get { return aa; }
-//        set { aa = value; }
-//    }
+
+   
+    //int aa=0;
+    //    public int gNuma
+    //    {
+
+    //        get { return aa; }
+    //        set { aa = value; }
+    //    }
 }

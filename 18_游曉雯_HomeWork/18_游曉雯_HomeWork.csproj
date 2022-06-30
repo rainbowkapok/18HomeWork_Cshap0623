@@ -106,11 +106,23 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7-1.cs">
+    <Compile Include="Guess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7-1.Designer.cs">
-      <DependentUpon>Form7-1.cs</DependentUpon>
+    <Compile Include="Guess.Designer.cs">
+      <DependentUpon>Guess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuessFom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuessFom.Designer.cs">
+      <DependentUpon>GuessFom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7_1.Designer.cs">
+      <DependentUpon>Form7_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form7.cs">
       <SubType>Form</SubType>
@@ -123,12 +135,6 @@
     </Compile>
     <Compile Include="Page.Designer.cs">
       <DependentUpon>Page.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Index.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Index.Designer.cs">
-      <DependentUpon>Index.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,17 +165,20 @@
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7-1.resx">
-      <DependentUpon>Form7-1.cs</DependentUpon>
+    <EmbeddedResource Include="Guess.resx">
+      <DependentUpon>Guess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuessFom.resx">
+      <DependentUpon>GuessFom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7_1.resx">
+      <DependentUpon>Form7_1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page.resx">
       <DependentUpon>Page.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Index.resx">
-      <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

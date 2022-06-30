@@ -185,7 +185,7 @@ namespace _18_游曉雯_HomeWork
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox5.Location = new System.Drawing.Point(10, 525);
+            this.textBox5.Location = new System.Drawing.Point(19, 525);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(79, 36);
             this.textBox5.TabIndex = 24;
@@ -193,7 +193,7 @@ namespace _18_游曉雯_HomeWork
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox6.Location = new System.Drawing.Point(141, 525);
+            this.textBox6.Location = new System.Drawing.Point(132, 525);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(77, 36);
             this.textBox6.TabIndex = 25;
@@ -210,7 +210,7 @@ namespace _18_游曉雯_HomeWork
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(617, 587);
+            this.button6.Location = new System.Drawing.Point(776, 577);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(207, 43);
@@ -239,11 +239,12 @@ namespace _18_游曉雯_HomeWork
             // 
             // label5
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(243, 276);
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(225, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(730, 31);
+            this.label5.Size = new System.Drawing.Size(758, 79);
             this.label5.TabIndex = 33;
+            this.label5.Visible = false;
             // 
             // Form5
             // 
