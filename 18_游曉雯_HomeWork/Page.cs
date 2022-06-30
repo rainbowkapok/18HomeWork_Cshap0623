@@ -74,7 +74,7 @@ namespace _18_游曉雯_HomeWork
         private void button7_Click(object sender, EventArgs e)
         {
             splitContainer2.Panel2.Controls.Clear();
-            testGuess No7 = new testGuess();
+            Guess No7 = new Guess();
             No7.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No7);
             No7.Show();

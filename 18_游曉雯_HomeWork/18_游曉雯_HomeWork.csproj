@@ -112,11 +112,11 @@
     <Compile Include="Guess.Designer.cs">
       <DependentUpon>Guess.cs</DependentUpon>
     </Compile>
-    <Compile Include="GuessFom.cs">
+    <Compile Include="GuessInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuessFom.Designer.cs">
-      <DependentUpon>GuessFom.cs</DependentUpon>
+    <Compile Include="GuessInput.Designer.cs">
+      <DependentUpon>GuessInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Form7_1.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="Guess.resx">
       <DependentUpon>Guess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GuessFom.resx">
-      <DependentUpon>GuessFom.cs</DependentUpon>
+    <EmbeddedResource Include="GuessInput.resx">
+      <DependentUpon>GuessInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form7_1.resx">
       <DependentUpon>Form7_1.cs</DependentUpon>

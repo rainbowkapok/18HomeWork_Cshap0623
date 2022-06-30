@@ -1,7 +1,7 @@
 ﻿
 namespace _18_游曉雯_HomeWork
 {
-    partial class GuessFom
+    partial class GuessInput
     {
         /// <summary>
         /// Required designer variable.
@@ -38,22 +38,22 @@ namespace _18_游曉雯_HomeWork
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(326, 98);
+            this.button1.Location = new System.Drawing.Point(310, 98);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 41);
+            this.button1.Size = new System.Drawing.Size(116, 41);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Cancel";
+            this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(326, 41);
+            this.button2.Location = new System.Drawing.Point(310, 41);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 41);
+            this.button2.Size = new System.Drawing.Size(116, 41);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Enter";
+            this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -95,7 +95,7 @@ namespace _18_游曉雯_HomeWork
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox Gu1;
         private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox Gu1;
     }
 }

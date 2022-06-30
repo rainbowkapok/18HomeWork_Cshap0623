@@ -19,9 +19,16 @@ namespace _18_游曉雯_HomeWork
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Form7_1 OpenF71 = new Form7_1();
-            //OpenF71.Show();
-            
+            Form7_1 OpenF71 = new Form7_1();
+            OpenF71.Show();
+
+            GuessN newN = new GuessN();
+            //int i = newN.Dis(newN.num);
+            //label2.Text = i.ToString();
+            int j = newN.num;
+            //int i = newN.Dis(j);
+            //label2.Text = i.ToString();
+
         }
         private void button2_Click(object sender, EventArgs e)
         {

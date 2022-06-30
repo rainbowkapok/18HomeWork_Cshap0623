@@ -15,15 +15,53 @@ namespace _18_游曉雯_HomeWork
         public int gNum;
         public int min;
         public int max;
-        public int ber;
+        public int a;
         public int num
         {
-            get { return ber; }
+            get { return a; }
             set
             {
-                ber = value;
+                a = value;
             }
         }
+
+        //public  int Dis(int a)
+        //{
+        //    int ans = 5;
+        //    int count = 0; //猜的次數
+        //    int max = 100;
+        //    int min = 1;
+        //    while (a >= min && a < max)
+        //    {
+        //        count += 1;
+
+        //        if (a < ans)
+        //        {
+        //            min = a;
+                    
+        //            break;
+        //        }
+        //        else if (a > ans)
+        //        {
+        //            max = a;
+                   
+        //            break;
+        //        }
+        //        else
+        //        {
+                    
+        //            break;
+        //        }
+                
+        //    }
+
+        //    while (a > 100)
+        //    {
+               
+        //        break;
+        //    }
+        //    return a;
+        //}
     }
 
    
