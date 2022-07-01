@@ -16,7 +16,7 @@ namespace _18_游曉雯_HomeWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Guess());
+            Application.Run(new Page());
         }
     }
 }

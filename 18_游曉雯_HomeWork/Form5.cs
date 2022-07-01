@@ -19,10 +19,10 @@ namespace _18_游曉雯_HomeWork
 
         const int b = 11;
         const int a = 9;
-        string f = "";
+
         private void Form5_Load(object sender, EventArgs e)
         {
-            
+
             //string f= $"{"姓名",a}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
             // label6.Text = f;
             /*"舉例:\r\n\t測試";*/
@@ -36,9 +36,9 @@ namespace _18_游曉雯_HomeWork
         List<int> MylistMH = new List<int>();
         void showshow()
         {
-           
+
         }
-        
+
         public int showh(int x, int y, int z)
         {
             showRange.Add(x);
@@ -61,7 +61,7 @@ namespace _18_游曉雯_HomeWork
         private void button1_Click(object sender, EventArgs e)
         {
             label5.Visible = false;
-            MyClass2 num=new MyClass2();
+            MyClass2 num = new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -109,7 +109,7 @@ namespace _18_游曉雯_HomeWork
             int mm = 0;
             label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
 
-            
+
 
 
             //MyEnum ECnum = MyEnum.國文;
@@ -150,7 +150,7 @@ namespace _18_游曉雯_HomeWork
         private void button2_Click(object sender, EventArgs e)
         {
             label5.Visible = false;
-            MyClass2 num=new MyClass2();
+            MyClass2 num = new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -202,7 +202,7 @@ namespace _18_游曉雯_HomeWork
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MyClass2 num=new MyClass2();
+            MyClass2 num = new MyClass2();
             num.EName = textBox1.Text;
             num.EChi = int.Parse(textBox2.Text);
             num.Eng = int.Parse(textBox3.Text);
@@ -259,7 +259,7 @@ namespace _18_游曉雯_HomeWork
             MyClass2 num = new MyClass2();
             label6.Text = "";
             label8.Text = "";
-            
+
             num.EName = "";
             num.EChi = 0;
             num.Eng = 0;
@@ -284,14 +284,14 @@ namespace _18_游曉雯_HomeWork
 
             string cs = textBox5.Text;
             string ch = textBox6.Text;
-            
+
 
             foreach (var item in Mylist)
-            {                
+            {
                 MylistCH.Add(item.EChi);
-                
+
             }
-            
+
             int tt = MylistCH.IndexOf(int.Parse(cs));
             int dd = MylistCH.IndexOf(int.Parse(ch));
             //MessageBox.Show(tt.ToString());
@@ -316,7 +316,7 @@ namespace _18_游曉雯_HomeWork
                             result += $"{ggname,-6}{ggchi,b}{ggeng,b}{ggmat,b}";
                         }
                     }
-                    
+
                     label5.Enabled = Visible;
                 }
                 else
@@ -338,7 +338,7 @@ namespace _18_游曉雯_HomeWork
                             result2 += $"{hhname,-6}{hhchi,b}{hheng,b}{hhmat,b}";
                         }
                     }
-                   
+
                     label5.Enabled = Visible;
                 }
                 else
@@ -346,7 +346,7 @@ namespace _18_游曉雯_HomeWork
                     MessageBox.Show("找不到值,請重新輸入");
                 }
                 ;
-                
+
             }
             else
             {
@@ -453,7 +453,7 @@ namespace _18_游曉雯_HomeWork
             int enH = 0;
             int maH = 0;
 
-            MylistCH.Sort();        
+            MylistCH.Sort();
             chiL = MylistCH[0];
             MylistCH.Sort();
             MylistCH.Reverse();
@@ -475,18 +475,67 @@ namespace _18_游曉雯_HomeWork
             lb8L += $"最低分\t{chiL,a}{enL,a}{maL,a}\n";
             string lb8H = "";
             lb8H += $"最高分\t{chiH,a}{enH,a}{maH,a}";
-            
-            label8.Text = lb8t + lb8a+ lb8L+ lb8H;
+
+            label8.Text = lb8t + lb8a + lb8L + lb8H;
 
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            foreach (MyClass2 item in Mylist)
+            MyClass2 num = new MyClass2();
+            num.EName = textBox1.Text;
+            num.EChi = int.Parse(textBox2.Text);
+            num.Eng = int.Parse(textBox3.Text);
+            num.EMath = int.Parse(textBox4.Text);
+            Mylist.Add(num);
+            string llow = "";
+            string hscore = "";
+            string result = "";
+            string str1 = "";
+            string str2 = "";
+            int chi;
+            int eng;
+            int math;
+            int total;
+            double avg;
+            int s1 = int.Parse(textBox5.Text);
+            int s2 = int.Parse(textBox6.Text);
+            if (s2>s1 && s1<s2)
             {
 
+
+
+                foreach (MyClass2 item in Mylist)
+                {
+                    str1 = item.EName;
+                    chi = item.EChi;
+                    eng = item.Eng;
+                    math = item.EMath;
+                    total = item.EChi + item.Eng + item.EMath;
+                    avg = total / 3;
+                    result += $"{str1,-6}{chi,b}{eng,b}{math,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
+                }
+                string[] subject = new string[] { "國文", "英文", "數學" };
+                int[] score = new int[] { num.EChi, num.Eng, num.EMath };
+                Array.Sort(score, subject);
+                for (int i = 0; i < subject.Length; i++)
+                {
+                    //MessageBox.Show(subject[i]+score[i]);
+                    llow = subject[0] + score[0];
+                }
+                str1 = llow;
+                Array.Reverse(score);
+                Array.Reverse(subject);
+                for (int i = 0; i < subject.Length; i++)
+                {
+                    //MessageBox.Show(subject[i] + score[i]);
+                    hscore = subject[0] + score[0];
+                }
+                str2 = hscore;
+                label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
             }
+
         }
     }
 }
