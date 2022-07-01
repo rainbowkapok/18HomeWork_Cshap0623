@@ -52,6 +52,12 @@
     <Compile Include="Ans4.cs" />
     <Compile Include="Ans5.cs" />
     <Compile Include="Ans7.cs" />
+    <Compile Include="FATHER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FATHER.Designer.cs">
+      <DependentUpon>FATHER.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fm3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     <Compile Include="Form6.Designer.cs">
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Boy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boy.Designer.cs">
+      <DependentUpon>Boy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +150,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FATHER.resx">
+      <DependentUpon>FATHER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fm3.resx">
       <DependentUpon>Fm3.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form6.resx">
       <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boy.resx">
+      <DependentUpon>Boy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guess.resx">
       <DependentUpon>Guess.cs</DependentUpon>

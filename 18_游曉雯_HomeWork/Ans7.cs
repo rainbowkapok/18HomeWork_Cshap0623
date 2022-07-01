@@ -16,6 +16,7 @@ namespace _18_游曉雯_HomeWork
         public int min;
         public int max;
         public static int n;
+        
         public int a;
         public int num
         {

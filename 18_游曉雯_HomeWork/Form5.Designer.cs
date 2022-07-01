@@ -49,6 +49,7 @@ namespace _18_游曉雯_HomeWork
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox4
@@ -246,11 +247,22 @@ namespace _18_游曉雯_HomeWork
             this.label5.TabIndex = 33;
             this.label5.Visible = false;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(245, 587);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(138, 43);
+            this.button7.TabIndex = 34;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 652);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label7);
@@ -302,5 +314,6 @@ namespace _18_游曉雯_HomeWork
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button7;
     }
 }

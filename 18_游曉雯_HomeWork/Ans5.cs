@@ -15,6 +15,9 @@ namespace _18_游曉雯_HomeWork
         public int EChi { get; set; }
         public int Eng { get; set; }
         public int EMath { get; set; }
+        public int Emax { get; set; }
+        public int Emin { get; set; }
+        public double Eavg { get; set; }
 
     }
     public enum MyEnum :int

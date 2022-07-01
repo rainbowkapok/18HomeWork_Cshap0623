@@ -64,6 +64,7 @@ namespace _18_游曉雯_HomeWork
             this.Gu1.Name = "Gu1";
             this.Gu1.Size = new System.Drawing.Size(397, 39);
             this.Gu1.TabIndex = 2;
+            this.Gu1.TextChanged += new System.EventHandler(this.Gu1_TextChanged);
             // 
             // label1
             // 
@@ -75,7 +76,7 @@ namespace _18_游曉雯_HomeWork
             this.label1.TabIndex = 3;
             this.label1.Text = "請輸入號碼:";
             // 
-            // GuessFom
+            // GuessInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +85,7 @@ namespace _18_游曉雯_HomeWork
             this.Controls.Add(this.Gu1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "GuessFom";
+            this.Name = "GuessInput";
             this.Text = "GuessFom";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,10 +93,9 @@ namespace _18_游曉雯_HomeWork
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox Gu1;
+        internal System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.Button button2;
+        internal System.Windows.Forms.Label label1;
     }
 }

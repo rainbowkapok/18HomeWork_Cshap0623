@@ -18,51 +18,32 @@ namespace _18_游曉雯_HomeWork
             InitializeComponent();
         }
 
-
-            int ans = 5;
-            int count = 0; //猜的次數
-            int max = 100;
-            int min = 1;
+        int a;
+        
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            
+           
             GuessInput G = new GuessInput();//輸入的表單
             G.Show();
-            //label3.Text = G.Gu1.Text;
-            // int a = int.Parse(label3.Text);
-            //MessageBox.Show(GuessN.n.ToString());
-            int a = GuessN.n;
-
-            while (a >= min && a < max)
-            {
-                count += 1;
-
-                if (a < ans)
-                {
-                    min = a;
-                    MessageBox.Show("Min" + min.ToString());
-                    break;
-                }
-                else if (a > ans)
-                {
-                    max = a;
-                    MessageBox.Show("Max" + max.ToString());
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("答對了!");
-                    break;
-                }
-
-            }
-
-            while (a > 100)
-            {
-                MessageBox.Show("超出100!");
-                break;
-            }
-
+            G.Owner = this;
+           
+            
         }
+
+        private void Guess_Load(object sender, EventArgs e)
+        {
+            Random myans = new Random();
+            int ans = myans.Next(1, 100);
+            a = ans;
+            label4.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("正確答案" + a);
+            label4.Text = a.ToString();
+        }
+
     }
 }

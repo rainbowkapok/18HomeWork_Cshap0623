@@ -480,5 +480,13 @@ namespace _18_游曉雯_HomeWork
 
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            foreach (MyClass2 item in Mylist)
+            {
+
+            }
+        }
     }
 }
