@@ -34,12 +34,21 @@ namespace _18_游曉雯_HomeWork
             //num.English = int.Parse(textBox3.Text);
             //num.Math = int.Parse(textBox4.Text);
             //result += $"姓名:{num.Name}\n國文:{num.Chinese}\n英文:{num.English}\n數學:{num.Math}";
-            num.Name = textBox1.Text;
-            num.ChineseScore = int.Parse(textBox2.Text);
-            num.EnglishScore = int.Parse(textBox3.Text);
-            num.MathScore = int.Parse(textBox4.Text);
-            IsMy.Add(num);
-            show();
+
+            try
+            {
+                num.Name = textBox1.Text;
+                num.ChineseScore = int.Parse(textBox2.Text);
+                num.EnglishScore = int.Parse(textBox3.Text);
+                num.MathScore = int.Parse(textBox4.Text);
+                IsMy.Add(num);
+                show();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("請輸入正確數值");
+            }
 
             //int[] Num = new int[] { num.ChineseScore = int.Parse(textBox2.Text),
             //num.EnglishScore = int.Parse(textBox3.Text),
@@ -51,8 +60,8 @@ namespace _18_游曉雯_HomeWork
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            label5.Text += result;
+
+            label5.Text = result;
         }
         //string result2 = "";
         private void button3_Click(object sender, EventArgs e)
@@ -73,7 +82,7 @@ namespace _18_游曉雯_HomeWork
             mylist.Sort();
             string mylist1 = string.Join("->", mylist);
             MessageBox.Show($"分數由小到大:{mylist1}");
-            label6.Text = "最低分"+mylist[0].ToString()+"\n"+"最高分"+ mylist[2].ToString();
+            label6.Text = "最低分" + mylist[0].ToString() + "\n" + "最高分" + mylist[2].ToString();
             //String result1 = "";
             //foreach (var item in mylist1)
             //{
@@ -81,7 +90,7 @@ namespace _18_游曉雯_HomeWork
             //}
             //MessageBox.Show(result1);
             //label6.Text = $"最高分:{result1},最低分:{result1}";
-            
+
             //foreach (var item in IsMy)
             //{
             //    result2 += $"{item.Name}:{item.ChineseScore},{item.EnglishScore},{item.MathScore}";
@@ -92,7 +101,7 @@ namespace _18_游曉雯_HomeWork
             //        orderby p.ChineseScore descending
             //        select p;
 
-            
+
             //string k = "";
             //foreach (var item in IsMy)
             //{
@@ -202,7 +211,7 @@ namespace _18_游曉雯_HomeWork
             label5.Text = "";
             label6.Text = "";
             num.Name = "";
-            num.ChineseScore =0;
+            num.ChineseScore = 0;
             num.EnglishScore = 0;
             num.MathScore = 0;
             textBox1.Text = "a";

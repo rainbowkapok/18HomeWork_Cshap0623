@@ -24,6 +24,8 @@ namespace _18_游曉雯_HomeWork
             No1.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No1);
             No1.Show();
+            No1.Dock = DockStyle.Fill;
+            No1.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -33,6 +35,9 @@ namespace _18_游曉雯_HomeWork
             No2.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No2);
             No2.Show();
+            No2.Show();
+            No2.Dock = DockStyle.Fill;
+            No2.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -42,6 +47,8 @@ namespace _18_游曉雯_HomeWork
             No3.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No3);
             No3.Show();
+            No3.Dock = DockStyle.Fill;
+            No3.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -51,6 +58,9 @@ namespace _18_游曉雯_HomeWork
             No4.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No4);
             No4.Show();
+            No4.Show();
+            No4.Dock = DockStyle.Fill;
+            No4.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -60,6 +70,9 @@ namespace _18_游曉雯_HomeWork
             No5.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No5);
             No5.Show();
+            No5.Show();
+            No5.Dock = DockStyle.Fill;
+            No5.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -69,6 +82,9 @@ namespace _18_游曉雯_HomeWork
             No6.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No6);
             No6.Show();
+            No6.Show();
+            No6.Dock = DockStyle.Fill;
+            No6.Bounds = splitContainer2.Panel2.Bounds;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -78,6 +94,9 @@ namespace _18_游曉雯_HomeWork
             No7.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(No7);
             No7.Show();
+            No7.Show();
+            No7.Dock = DockStyle.Fill;
+            No7.Bounds = splitContainer2.Panel2.Bounds;
         }
     }
 }
