@@ -31,9 +31,11 @@ namespace _18_游曉雯_HomeWork
         Dictionary<int, int> mykey = new Dictionary<int, int>();
         List<int> showRange = new List<int>();
         List<MyClass2> Mylist = new List<MyClass2>();
+        List<MyClass2> showMylist = new List<MyClass2>();
         List<int> MylistCH = new List<int>();
         List<int> MylistEH = new List<int>();
         List<int> MylistMH = new List<int>();
+        List<MyClass2> mlist = new List<MyClass2>();
         void showshow()
         {
 
@@ -293,95 +295,72 @@ namespace _18_游曉雯_HomeWork
             }
 
             int tt = MylistCH.IndexOf(int.Parse(cs));
-            int dd = MylistCH.IndexOf(int.Parse(ch));
+            //int dd = MylistCH.IndexOf(int.Parse(ch));
             //MessageBox.Show(tt.ToString());
-            string result = "";
-            string result2 = "";
+
             //IndexOf<T>(T[], T, Int32)
 
-
-            if (int.Parse(ch) > int.Parse(cs))
+            string result = "";
+            int total;
+            double avg;
+            int low;
+            int h;
+            //if (int.Parse(ch) > int.Parse(cs))
+            //{
+            if (tt >= 0)
             {
-                if (tt >= 0)
+                for (int i = 0; i < Mylist.Count; i++)
                 {
-                    for (int i = 0; i < Mylist.Count; i++)
+                    if (tt == i)
                     {
-                        if (tt == i)
-                        {
-                            string ggname = Mylist[i].EName;
-                            int ggchi = Mylist[i].EChi;
-                            int ggeng = Mylist[i].Eng;
-                            int ggmat = Mylist[i].EMath;
-                            //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
-                            result += $"{ggname,-6}{ggchi,b}{ggeng,b}{ggmat,b}";
-                        }
+                        string ggname = Mylist[i].EName;
+                        int ggchi = Mylist[i].EChi;
+                        int ggeng = Mylist[i].Eng;
+                        int ggmat = Mylist[i].EMath;
+                        total = ggchi + ggeng + ggmat;
+                        avg = total / 3;
+
+                        result += $"{ggname,-6}{ggchi,b}{ggeng,b}{ggmat,b}{total,b}{avg,b}";
                     }
-
-                    label5.Enabled = Visible;
-                }
-                else
-                {
-                    MessageBox.Show("找不到值,請重新輸入");
                 }
 
-                if (dd >= 0)
-                {
-                    for (int i = 0; i < Mylist.Count; i++)
-                    {
-                        if (dd == i)
-                        {
-                            string hhname = Mylist[i].EName;
-                            int hhchi = Mylist[i].EChi;
-                            int hheng = Mylist[i].Eng;
-                            int hhmat = Mylist[i].EMath;
-                            //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
-                            result2 += $"{hhname,-6}{hhchi,b}{hheng,b}{hhmat,b}";
-                        }
-                    }
-
-                    label5.Enabled = Visible;
-                }
-                else
-                {
-                    MessageBox.Show("找不到值,請重新輸入");
-                }
-                ;
-
+                label5.Enabled = Visible;
+                label5.Text = result;
             }
-            else
-            {
-                MessageBox.Show("找不到值,請重新輸入(搜尋值左欄填小，右欄填大)，謝謝!");
-            }
+            //else
+            //{
+            //    MessageBox.Show("找不到值,請重新輸入");
+            //}
 
-            int low = 0;
-            int lh = 0;
-            string result3 = "";
-            foreach (var item in Mylist)
-            {
-                int avg = 0;
-                int atotal = 0;
-                atotal = item.EChi + item.Eng + item.EMath;
-                avg = atotal / 3;
-                showRange.Add(item.EChi);
-                showRange.Add(item.Eng);
-                showRange.Add(item.EMath);
-                showRange.Sort();
-                showRange.Reverse();
-                lh = showRange[0];
+            //if (dd >= 0 )
+            //{
+            //    for (int i = 0; i < Mylist.Count; i++)
+            //    {
+            //        if (dd == i)
+            //        {
+            //            string hhname = Mylist[i].EName;
+            //            int hhchi = Mylist[i].EChi;
+            //            int hheng = Mylist[i].Eng;
+            //            int hhmat = Mylist[i].EMath;
+            //            //MessageBox.Show($"{ggname},{ggchi},{ggeng},{ggmat}");
+            //            result2 += $"{hhname,-6}{hhchi,b}{hheng,b}{hhmat,b}";
+            //        }
+            //    }
 
-                result3 += $"{(atotal).ToString("###"),b}{(avg).ToString("###.##"),b}{low,b}{lh,b}\n";
-            }
-            foreach (var item in Mylist)
-            {
-                showRange.Add(item.EChi);
-                showRange.Add(item.Eng);
-                showRange.Add(item.EMath);
-                showRange.Sort();
-                low = showRange[0];
-            }
-            label5.Text = $"{result}{result3}\n{result2}{result3}\n";
+            //    label5.Enabled = Visible;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("找不到值,請重新輸入");
+            //}
 
-            //List<int> kk = new List<int>();
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("找不到值,請重新輸入(搜尋值左欄填小，右欄填大)，謝謝!");
+            //}
+
 
             //kk.Add(10);
             //kk.Add(2);
@@ -419,13 +398,8 @@ namespace _18_游曉雯_HomeWork
 
         private void button6_Click(object sender, EventArgs e)
         {
-            int totalchi = 0;
-            int totaleng = 0;
-            int totalmath = 0;
-            int avgchi = 0;
-            int avgeng = 0;
-            int avgmath = 0;
-            int tavgc = 0;
+            int totalchi = 0, totaleng = 0, totalmath = 0;
+            int vgchi, vgeng, vgmath;
             string lb8t = "";//各科總分
             string lb8a = "";//平均
             foreach (var item in Mylist)
@@ -437,11 +411,11 @@ namespace _18_游曉雯_HomeWork
                 MylistEH.Add(item.Eng);
                 MylistMH.Add(item.EMath);
             }
-            avgchi = totalchi / 3;
-            avgeng = totaleng / 3;
-            avgmath = totalmath / 3;
+            vgchi = totalchi / 3;
+            vgeng = totaleng / 3;
+            vgmath = totalmath / 3;
             lb8t += $"總分\t{totalchi,a}{totaleng,a}{totalmath,a}\n";
-            lb8a += $"平均\t{avgchi,a}{avgeng,a}{avgmath,a}\n";
+            lb8a += $"平均\t{vgchi,a}{vgeng,a}{vgmath,a}\n";
             foreach (var item in Mylist)
             {
                 MylistCH.Add(item.EChi);
@@ -483,59 +457,76 @@ namespace _18_游曉雯_HomeWork
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MyClass2 num = new MyClass2();
-            num.EName = textBox1.Text;
-            num.EChi = int.Parse(textBox2.Text);
-            num.Eng = int.Parse(textBox3.Text);
-            num.EMath = int.Parse(textBox4.Text);
-            Mylist.Add(num);
+            label6.Text = "";
+            label5.Visible = true;
+            int x = int.Parse(textBox5.Text);
+            int y = int.Parse(textBox6.Text);
+            string name;
+            int c, eng, m, low;
+            float avg;
+            int total;
+            string Result = "";
             string llow = "";
             string hscore = "";
-            string result = "";
             string str1 = "";
             string str2 = "";
-            int chi;
-            int eng;
-            int math;
-            int total;
-            double avg;
-            int s1 = int.Parse(textBox5.Text);
-            int s2 = int.Parse(textBox6.Text);
-            if (s2>s1 && s1<s2)
+
+            foreach (MyClass2 item in Mylist)
             {
-
-
-
-                foreach (MyClass2 item in Mylist)
+                //MessageBox.Show(item.EName + "-" + item.EChi + "-" + item.Eng + "-" + item.EMath);
+                if (item.EChi >= x && item.EChi <= y)
                 {
-                    str1 = item.EName;
-                    chi = item.EChi;
+                    name = item.EName;
+                    c = item.EChi;
                     eng = item.Eng;
-                    math = item.EMath;
-                    total = item.EChi + item.Eng + item.EMath;
+                    m = item.EMath;
+                    total = c + eng + m;
                     avg = total / 3;
-                    result += $"{str1,-6}{chi,b}{eng,b}{math,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
+                    //MessageBox.Show($"{name}-{c}-{eng}-{m}\n");
+                    //Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
+                    int[] score = new int[] { c, eng, m };
+                    string[] subject = new string[] { "國文", "英文", "數學" };
+                    Array.Sort(score, subject);
+                    for (int i = 0; i < subject.Length; i++)
+                    {
+                        //MessageBox.Show(subject[i]+score[i]);
+                        llow = subject[0] + score[0];
+                    }
+                    str1 = llow;
+                    Array.Reverse(score);
+                    Array.Reverse(subject);
+                    for (int i = 0; i < subject.Length; i++)
+                    {
+                        //MessageBox.Show(subject[i] + score[i]);
+                        hscore = subject[0] + score[0];
+                    }
+                    str2 = hscore;
+                    Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
+                   
                 }
-                string[] subject = new string[] { "國文", "英文", "數學" };
-                int[] score = new int[] { num.EChi, num.Eng, num.EMath };
-                Array.Sort(score, subject);
-                for (int i = 0; i < subject.Length; i++)
-                {
-                    //MessageBox.Show(subject[i]+score[i]);
-                    llow = subject[0] + score[0];
-                }
-                str1 = llow;
-                Array.Reverse(score);
-                Array.Reverse(subject);
-                for (int i = 0; i < subject.Length; i++)
-                {
-                    //MessageBox.Show(subject[i] + score[i]);
-                    hscore = subject[0] + score[0];
-                }
-                str2 = hscore;
-                label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
             }
+            label6.Text += $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
+
+            label5.Text = Result;
+       
+         
 
         }
+
+        
+
+        //var query = from c in Mylist
+        //            group c by c.EName into ename
+        //            where ename.Count() > 2
+        //            select ename;
+
+
+        //foreach (var i in item)
+        //{
+        //    MessageBox.Show(i.EName.ToString()+i.EChi.ToString());
+        //}
+
+
+
     }
 }

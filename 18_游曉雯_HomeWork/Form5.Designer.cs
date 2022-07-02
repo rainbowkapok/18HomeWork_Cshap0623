@@ -174,12 +174,12 @@ namespace _18_游曉雯_HomeWork
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(13, 587);
+            this.button5.Location = new System.Drawing.Point(225, 587);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(205, 43);
+            this.button5.Size = new System.Drawing.Size(100, 43);
             this.button5.TabIndex = 21;
-            this.button5.Text = "搜尋國文成績";
+            this.button5.Text = "indexof";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -211,7 +211,7 @@ namespace _18_游曉雯_HomeWork
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(776, 577);
+            this.button6.Location = new System.Drawing.Point(765, 587);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(207, 43);
@@ -240,20 +240,21 @@ namespace _18_游曉雯_HomeWork
             // 
             // label5
             // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(225, 68);
+            this.label5.Location = new System.Drawing.Point(236, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(758, 79);
+            this.label5.Size = new System.Drawing.Size(736, 319);
             this.label5.TabIndex = 33;
             this.label5.Visible = false;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(245, 587);
+            this.button7.Location = new System.Drawing.Point(22, 587);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(138, 43);
             this.button7.TabIndex = 34;
-            this.button7.Text = "button7";
+            this.button7.Text = "搜尋國文成績";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
