@@ -98,5 +98,17 @@ namespace _18_游曉雯_HomeWork
             No7.Dock = DockStyle.Fill;
             No7.Bounds = splitContainer2.Panel2.Bounds;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            Form8 No8 = new Form8();
+            No8.TopLevel = false;
+            splitContainer2.Panel2.Controls.Add(No8);
+            No8.Show();
+            No8.Show();
+            No8.Dock = DockStyle.Fill;
+            No8.Bounds = splitContainer2.Panel2.Bounds;
+        }
     }
 }

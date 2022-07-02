@@ -54,9 +54,9 @@ namespace _18_游曉雯_HomeWork
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(329, 232);
+            this.button1.Location = new System.Drawing.Point(326, 220);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(117, 46);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;

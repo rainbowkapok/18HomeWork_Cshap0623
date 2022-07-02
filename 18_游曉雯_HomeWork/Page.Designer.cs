@@ -38,6 +38,7 @@ namespace _18_游曉雯_HomeWork
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -73,6 +74,7 @@ namespace _18_游曉雯_HomeWork
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.splitContainer2.Panel1.Controls.Add(this.button8);
             this.splitContainer2.Panel1.Controls.Add(this.button7);
             this.splitContainer2.Panel1.Controls.Add(this.button6);
             this.splitContainer2.Panel1.Controls.Add(this.button5);
@@ -158,6 +160,16 @@ namespace _18_游曉雯_HomeWork
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(37, 381);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(97, 29);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "筆記本";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -187,5 +199,6 @@ namespace _18_游曉雯_HomeWork
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button8;
     }
 }
