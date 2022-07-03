@@ -60,31 +60,26 @@ namespace _18_游曉雯_HomeWork
             //FileStream fs = new FileStream("../Read.txt", FileMode.Create);
             //StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
             word = richTextBox1.Text;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK )
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string mysavepath = saveFileDialog1.FileName;
-                FileStream fs = new FileStream(mysavepath,FileMode.Create);
+                FileStream fs = new FileStream(mysavepath, FileMode.Create);
                 StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
                 sw.Write(word);
                 sw.Close();
                 fs.Close();
             }
-            
-
         }
 
         private void 紅ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            //richTextBox1.SelectionColor = Color.Red;
+           //richTextBox1.SelectionColor = Color.Red;
             richTextBox1.ForeColor = Color.Red;
-            
+
             //richTextBox1.AppendText(word);
             //如果每一行都要不一樣的話也可以寫成這樣：
             //richTextBox1.SelectionColor = Color.Purple;
             //richTextBox1.AppendText("TestLine2" + Environment.NewLine);
-
-            //richTextBox1.SelectionColor = Color.Red;
         }
 
         private void 綠ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,7 +104,7 @@ namespace _18_游曉雯_HomeWork
         string a;
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-                    
+
 
             //複製字串          
             //string a = "你好阿，我在寫程式";
@@ -128,28 +123,34 @@ namespace _18_游曉雯_HomeWork
             //Console.ReadLine();
 
             char[] str = new char[strmouseup];
-            a.CopyTo(0,str,0,strmouseup);
+            a.CopyTo(0, str, 0, strmouseup);
             foreach (var item in str)
             {
                 //MessageBox.Show(item.ToString());
                 result += item;
             }
-            
-            
-        }
 
+
+        }
+        int strmousedown;
         private void richTextBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button==MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
                 //a=richTextBox1.Text;
                 //MessageBox.Show(a);
-               
+                while (true)
+                {
+                    strmousedown += 1;
+                    
+                    break;
+                }
+
             }
 
         }
         int strmouseup;
-        
+
         private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -160,7 +161,7 @@ namespace _18_游曉雯_HomeWork
                 while (true)
                 {
                     strmouseup += 1;
-                    char[] str = new char[strmouseup];
+                    //char[] str = new char[strmouseup];
                     break;
                 }
             }
@@ -169,10 +170,10 @@ namespace _18_游曉雯_HomeWork
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-                NewWord = result;
-                MessageBox.Show(NewWord);
-           
-            
+            NewWord = result;
+            MessageBox.Show(NewWord);
+
+
         }
     }
 }
