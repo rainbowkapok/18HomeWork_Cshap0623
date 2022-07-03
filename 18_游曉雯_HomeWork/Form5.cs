@@ -106,7 +106,7 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
+                result += $"{item.EName,-6}{(item.EChi).ToString(),b}{(item.Eng).ToString(),b}{(item.EMath).ToString(),b}{(atotal).ToString(),b}{(avg).ToString(),b}{str1,b}{str2,b}\n";
             }
             int mm = 0;
             label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
@@ -186,8 +186,8 @@ namespace _18_游曉雯_HomeWork
 
             foreach (var item in Mylist)
             {
-                int avg = 0;
-                int atotal = 0;
+                double avg;
+                int atotal;
 
                 //showRange.Add(item.EChi);
                 //showRange.Add(item.Eng);
@@ -195,7 +195,7 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
+                result += $"{item.EName,-6}{(item.EChi).ToString(),b}{(item.Eng).ToString(),b}{(item.EMath).ToString(),b}{(atotal).ToString(),b}{(avg).ToString(),b}{str1,b}{str2,b}\n";
             }
 
             label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
@@ -237,7 +237,7 @@ namespace _18_游曉雯_HomeWork
 
             foreach (var item in Mylist)
             {
-                int avg = 0;
+                double avg = 0;
                 int atotal = 0;
 
                 //showRange.Add(item.EChi);
@@ -246,7 +246,7 @@ namespace _18_游曉雯_HomeWork
                 //showRange.Sort();
                 atotal = item.EChi + item.Eng + item.EMath;
                 avg = atotal / 3;
-                result += $"{item.EName,-6},{(item.EChi).ToString("###"),b},{(item.Eng).ToString("###"),b},{(item.EMath).ToString("###"),b},{(atotal).ToString("###"),b},{(avg).ToString("###.##"),b},{str1,b},{str2,b}\n";
+                result += $"{item.EName,-6}{(item.EChi).ToString(),b}{(item.Eng).ToString(),b}{(item.EMath).ToString(),b}{(atotal).ToString(),b}{(avg).ToString(),b}{str1,b}{str2,b}\n";
             }
 
             label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
@@ -260,6 +260,7 @@ namespace _18_游曉雯_HomeWork
             label5.Text = "";
             MyClass2 num = new MyClass2();
             label6.Text = "";
+            label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
             label8.Text = "";
 
             num.EName = "";
@@ -303,8 +304,7 @@ namespace _18_游曉雯_HomeWork
             string result = "";
             int total;
             double avg;
-            int low;
-            int h;
+            
             //if (int.Parse(ch) > int.Parse(cs))
             //{
             if (tt >= 0)
@@ -463,16 +463,18 @@ namespace _18_游曉雯_HomeWork
             int y = int.Parse(textBox6.Text);
             string name;
             int c, eng, m, low;
-            float avg;
+            double avg;
             int total;
             string Result = "";
             string llow = "";
             string hscore = "";
             string str1 = "";
             string str2 = "";
-
+            string Nname;
+           
             foreach (MyClass2 item in Mylist)
             {
+                Nname = item.EName;
                 //MessageBox.Show(item.EName + "-" + item.EChi + "-" + item.Eng + "-" + item.EMath);
                 if (item.EChi >= x && item.EChi <= y)
                 {
@@ -482,8 +484,9 @@ namespace _18_游曉雯_HomeWork
                     m = item.EMath;
                     total = c + eng + m;
                     avg = total / 3;
-                    //MessageBox.Show($"{name}-{c}-{eng}-{m}\n");
-                    //Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
+                   
+                        //MessageBox.Show($"{name}-{c}-{eng}-{m}\n");
+                        //Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
                     int[] score = new int[] { c, eng, m };
                     string[] subject = new string[] { "國文", "英文", "數學" };
                     Array.Sort(score, subject);
@@ -491,15 +494,9 @@ namespace _18_游曉雯_HomeWork
                     {
                         //MessageBox.Show(subject[i]+score[i]);
                         llow = subject[0] + score[0];
+                        hscore = subject[2] + score[2];
                     }
                     str1 = llow;
-                    Array.Reverse(score);
-                    Array.Reverse(subject);
-                    for (int i = 0; i < subject.Length; i++)
-                    {
-                        //MessageBox.Show(subject[i] + score[i]);
-                        hscore = subject[0] + score[0];
-                    }
                     str2 = hscore;
                     Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
                    
@@ -509,24 +506,12 @@ namespace _18_游曉雯_HomeWork
 
             label5.Text = Result;
        
-         
+        }
+
 
         }
 
+
+
         
-
-        //var query = from c in Mylist
-        //            group c by c.EName into ename
-        //            where ename.Count() > 2
-        //            select ename;
-
-
-        //foreach (var i in item)
-        //{
-        //    MessageBox.Show(i.EName.ToString()+i.EChi.ToString());
-        //}
-
-
-
-    }
 }
