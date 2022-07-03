@@ -111,9 +111,6 @@ namespace _18_游曉雯_HomeWork
             int mm = 0;
             label6.Text = $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n" + result;
 
-
-
-
             //MyEnum ECnum = MyEnum.國文;
             //MyEnum EEnum = MyEnum.英文;
             //MyEnum EMnum = MyEnum.數學;
@@ -500,16 +497,24 @@ namespace _18_游曉雯_HomeWork
                     str2 = hscore;
                     Result += $"{name,-3}{c,b}{eng,b}{m,b}{total,b}{avg,b}{str1,b}{str2,b}\n";
                    
+                    int size_h = Mylist.Count*20;
+                    label5.Text = Result;
+                    label5.BorderStyle = BorderStyle.FixedSingle;
+                    label5.Size = new Size(500, (size_h));
                 }
             }
             label6.Text += $"{"姓名",-6}{"國文",a}{"英文",a}{"數學",a}{"總分",a}{"平均",a}{"最低",a}{"最高",a}\n";
+            //int size_h = 20;
+            //label5.Text = Result;
+            //label5.BorderStyle = BorderStyle.FixedSingle;
+            //label5.Size = new Size(500,(size_h*5));
 
-            label5.Text = Result;
-       
+            //richTextBox1.SelectionColor = Color.Purple;
+            //richTextBox1.AppendText("TestLine2" + Environment.NewLine);
         }
 
 
-        }
+    }
 
 
 

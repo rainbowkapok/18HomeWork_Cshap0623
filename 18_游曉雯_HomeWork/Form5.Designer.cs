@@ -50,7 +50,6 @@ namespace _18_游曉雯_HomeWork
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            //this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox4
@@ -241,11 +240,10 @@ namespace _18_游曉雯_HomeWork
             // 
             // label5
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(236, 68);
+            this.label5.Location = new System.Drawing.Point(236, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(736, 319);
+            this.label5.Size = new System.Drawing.Size(736, 40);
             this.label5.TabIndex = 33;
             this.label5.Visible = false;
             // 
@@ -259,22 +257,11 @@ namespace _18_游曉雯_HomeWork
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
-            // 
-            //this.button8.Location = new System.Drawing.Point(391, 587);
-            //this.button8.Name = "button8";
-            //this.button8.Size = new System.Drawing.Size(92, 43);
-            //this.button8.TabIndex = 35;
-            //this.button8.Text = "button8";
-            //this.button8.UseVisualStyleBackColor = true;
-            //this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 652);
-            //this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button6);
@@ -326,8 +313,8 @@ namespace _18_游曉雯_HomeWork
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button7;
+        internal System.Windows.Forms.Label label5;
         //private System.Windows.Forms.Button button8;
     }
 }

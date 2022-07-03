@@ -16,7 +16,7 @@ namespace _18_游曉雯_HomeWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Page());
+            Application.Run(new Form8());
         }
     }
 }
