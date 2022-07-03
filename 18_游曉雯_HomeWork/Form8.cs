@@ -127,8 +127,8 @@ namespace _18_游曉雯_HomeWork
             //Console.WriteLine(str);
             //Console.ReadLine();
 
-            char[] str = new char[8];
-            a.CopyTo(0,str,0,8);
+            char[] str = new char[strmouseup];
+            a.CopyTo(0,str,0,strmouseup);
             foreach (var item in str)
             {
                 //MessageBox.Show(item.ToString());
@@ -141,26 +141,36 @@ namespace _18_游曉雯_HomeWork
         private void richTextBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button==MouseButtons.Left)
-            {                
+            {
                 //a=richTextBox1.Text;
                 //MessageBox.Show(a);
+               
             }
 
         }
+        int strmouseup;
+        
         private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 a = richTextBox1.Text;
-                MessageBox.Show(a);
+                //MessageBox.Show(a);
+
+                while (true)
+                {
+                    strmouseup += 1;
+                    char[] str = new char[strmouseup];
+                    break;
+                }
             }
 
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-                NewWord = word + result;
-                //MessageBox.Show(NewWord);
+                NewWord = result;
+                MessageBox.Show(NewWord);
            
             
         }
