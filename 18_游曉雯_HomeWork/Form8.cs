@@ -32,11 +32,20 @@ namespace _18_游曉雯_HomeWork
         {
             try
             {
-                StreamReader sr = new StreamReader("../Read.txt", Encoding.UTF8);
-                //FileStream fs = new FileStream("../Read.txt", FileMode.Open);
-                
-                richTextBox1.Text = sr.ReadToEnd();
-                sr.Close();
+                //if (openFileDialog1.ShowDialog()==DialogResult.OK)
+                //{
+                //    richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.RichText);}
+                //StreamReader sr = new StreamReader("../Read.txt", Encoding.UTF8);
+                //richTextBox1.Text = sr.ReadToEnd();
+                //sr.Close();
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string mypath = openFileDialog1.FileName;
+                    StreamReader sr = new StreamReader(mypath, Encoding.UTF8);
+                    richTextBox1.Text = sr.ReadToEnd();
+                    sr.Close();
+                };
+
             }
             catch (Exception)
             {
@@ -48,20 +57,20 @@ namespace _18_游曉雯_HomeWork
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             //richTextBox1.SaveFile("../Read.txt", RichTextBoxStreamType.RichText);
-
-            FileStream fs = new FileStream("../Read.txt", FileMode.Create);
-            StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
-            
-            word=richTextBox1.Text;
-            
-            if (richTextBox1.ForeColor==Color.Red)
+            //FileStream fs = new FileStream("../Read.txt", FileMode.Create);
+            //StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+            word = richTextBox1.Text;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK )
             {
-                //MessageBox.Show("rad");
-                richTextBox1.ForeColor = Color.Red;
+                string mysavepath = saveFileDialog1.FileName;
+                FileStream fs = new FileStream(mysavepath,FileMode.Create);
+                StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
                 sw.Write(word);
+                sw.Close();
+                fs.Close();
             }
-            sw.Close();
-            fs.Close();
+            
+
         }
 
         private void 紅ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -132,16 +141,26 @@ namespace _18_游曉雯_HomeWork
         private void richTextBox1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button==MouseButtons.Left)
-            {
-                
-                a=richTextBox1.Text;
+            {                
+                //a=richTextBox1.Text;
+                //MessageBox.Show(a);
             }
+
+        }
+        private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                a = richTextBox1.Text;
+                MessageBox.Show(a);
+            }
+
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
                 NewWord = word + result;
-                MessageBox.Show(NewWord);
+                //MessageBox.Show(NewWord);
            
             
         }
