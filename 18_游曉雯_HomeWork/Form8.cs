@@ -176,9 +176,12 @@ namespace _18_游曉雯_HomeWork
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
+
+            int loc = richTextBox1.SelectionStart;
             string inText = (string)Clipboard.GetDataObject().GetData(DataFormats.Text);
             int selectIndex = richTextBox1.SelectionStart;
             richTextBox1.Text = richTextBox1.Text.Insert(selectIndex, inText);
+            richTextBox1.SelectionStart = loc;
             //NewWord = result;
             //MessageBox.Show(NewWord);
         }
@@ -186,6 +189,29 @@ namespace _18_游曉雯_HomeWork
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             richTextBox1.Cut();
+        }
+
+        private void toUpperUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            string myText=richTextBox1.Text.ToUpper();
+            //MessageBox.Show($"{myText}");
+            richTextBox1.Text = "";
+            richTextBox1.Text = myText;
+            
+        }
+
+        private void toLowerLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string myText = richTextBox1.Text.ToLower();
+            //MessageBox.Show($"{myText}");
+            richTextBox1.Text = "";
+            richTextBox1.Text = myText;
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = "";
         }
     }
 }
