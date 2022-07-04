@@ -105,7 +105,7 @@ namespace _18_游曉雯_HomeWork
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
 
-
+            Clipboard.SetDataObject(richTextBox1.SelectedText);
             //複製字串          
             //string a = "你好阿，我在寫程式";
             //string b;
@@ -122,13 +122,13 @@ namespace _18_游曉雯_HomeWork
             //Console.WriteLine(str);
             //Console.ReadLine();
 
-            char[] str = new char[strmouseup];
-            a.CopyTo(0, str, 0, strmouseup);
-            foreach (var item in str)
-            {
-                //MessageBox.Show(item.ToString());
-                result += item;
-            }
+            //char[] str = new char[strmouseup];
+            //a.CopyTo(0, str, 0, strmouseup);
+            //foreach (var item in str)
+            //{
+            //    //MessageBox.Show(item.ToString());
+            //    result += item;
+            //}
 
 
         }
@@ -139,41 +139,53 @@ namespace _18_游曉雯_HomeWork
             {
                 //a=richTextBox1.Text;
                 //MessageBox.Show(a);
-                while (true)
-                {
-                    strmousedown += 1;
+                //while (true)
+                //{
+                //    strmousedown += 1;
                     
-                    break;
-                }
+                //    break;
+                //}
 
             }
 
         }
         int strmouseup;
-
+        char[] str;
         private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                a = richTextBox1.Text;
-                //MessageBox.Show(a);
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    a = richTextBox1.Text;
+            //    //MessageBox.Show(a);
 
-                while (true)
-                {
-                    strmouseup += 1;
-                    //char[] str = new char[strmouseup];
-                    break;
-                }
-            }
+            //    while (true)
+            //    {
+            //        strmouseup += 1;
+            //        //char[] str = new char[strmouseup];
+
+            //        //for (int i = 0; i < str; i++)
+            //        //{
+
+            //        //}
+            //        break;
+            //    }
+
+            //}
 
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            NewWord = result;
-            MessageBox.Show(NewWord);
+            string inText = (string)Clipboard.GetDataObject().GetData(DataFormats.Text);
+            int selectIndex = richTextBox1.SelectionStart;
+            richTextBox1.Text = richTextBox1.Text.Insert(selectIndex, inText);
+            //NewWord = result;
+            //MessageBox.Show(NewWord);
+        }
 
-
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
         }
     }
 }
