@@ -33,17 +33,23 @@ namespace _18_游曉雯_HomeWork
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.開啟ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.儲存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.另存新檔ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.列印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.預覽列印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.結束ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.復原ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.取消復原ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.剪下ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.複製ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.貼上ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.全選ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.自訂CToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,12 +83,6 @@ namespace _18_游曉雯_HomeWork
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.開啟ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +126,19 @@ namespace _18_游曉雯_HomeWork
             this.新增ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.新增ToolStripMenuItem.Text = "新增";
             // 
+            // 開啟ToolStripMenuItem
+            // 
+            this.開啟ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("開啟ToolStripMenuItem.Image")));
+            this.開啟ToolStripMenuItem.Name = "開啟ToolStripMenuItem";
+            this.開啟ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.開啟ToolStripMenuItem.Text = "開啟";
+            this.開啟ToolStripMenuItem.Click += new System.EventHandler(this.開啟ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
+            // 
             // 儲存ToolStripMenuItem
             // 
             this.儲存ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("儲存ToolStripMenuItem.Image")));
@@ -138,6 +151,12 @@ namespace _18_游曉雯_HomeWork
             this.另存新檔ToolStripMenuItem.Name = "另存新檔ToolStripMenuItem";
             this.另存新檔ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.另存新檔ToolStripMenuItem.Text = "另存新檔";
+            this.另存新檔ToolStripMenuItem.Click += new System.EventHandler(this.另存新檔ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
             // 
             // 列印ToolStripMenuItem
             // 
@@ -152,6 +171,11 @@ namespace _18_游曉雯_HomeWork
             this.預覽列印ToolStripMenuItem.Name = "預覽列印ToolStripMenuItem";
             this.預覽列印ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.預覽列印ToolStripMenuItem.Text = "預覽列印";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(267, 6);
             // 
             // 結束ToolStripMenuItem
             // 
@@ -177,37 +201,47 @@ namespace _18_游曉雯_HomeWork
             // 復原ToolStripMenuItem
             // 
             this.復原ToolStripMenuItem.Name = "復原ToolStripMenuItem";
-            this.復原ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.復原ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.復原ToolStripMenuItem.Text = "復原";
             // 
             // 取消復原ToolStripMenuItem
             // 
             this.取消復原ToolStripMenuItem.Name = "取消復原ToolStripMenuItem";
-            this.取消復原ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.取消復原ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.取消復原ToolStripMenuItem.Text = "取消復原";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(179, 6);
             // 
             // 剪下ToolStripMenuItem
             // 
             this.剪下ToolStripMenuItem.Name = "剪下ToolStripMenuItem";
-            this.剪下ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.剪下ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.剪下ToolStripMenuItem.Text = "剪下";
             // 
             // 複製ToolStripMenuItem
             // 
             this.複製ToolStripMenuItem.Name = "複製ToolStripMenuItem";
-            this.複製ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.複製ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.複製ToolStripMenuItem.Text = "複製";
             // 
             // 貼上ToolStripMenuItem
             // 
             this.貼上ToolStripMenuItem.Name = "貼上ToolStripMenuItem";
-            this.貼上ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.貼上ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.貼上ToolStripMenuItem.Text = "貼上";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(179, 6);
             // 
             // 全選ToolStripMenuItem
             // 
             this.全選ToolStripMenuItem.Name = "全選ToolStripMenuItem";
-            this.全選ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.全選ToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.全選ToolStripMenuItem.Text = "全選";
             // 
             // toolStripLabel3
@@ -247,33 +281,33 @@ namespace _18_游曉雯_HomeWork
             // 顏色CToolStripMenuItem
             // 
             this.顏色CToolStripMenuItem.Name = "顏色CToolStripMenuItem";
-            this.顏色CToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.顏色CToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.顏色CToolStripMenuItem.Text = "顏色(C)";
             // 
             // 字型VToolStripMenuItem
             // 
             this.字型VToolStripMenuItem.Name = "字型VToolStripMenuItem";
-            this.字型VToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.字型VToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.字型VToolStripMenuItem.Text = "字型(V)";
             // 
             // toUpperUToolStripMenuItem
             // 
             this.toUpperUToolStripMenuItem.Name = "toUpperUToolStripMenuItem";
-            this.toUpperUToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.toUpperUToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.toUpperUToolStripMenuItem.Text = "ToUpper(U)";
             this.toUpperUToolStripMenuItem.Click += new System.EventHandler(this.toUpperUToolStripMenuItem_Click);
             // 
             // toLowerLToolStripMenuItem
             // 
             this.toLowerLToolStripMenuItem.Name = "toLowerLToolStripMenuItem";
-            this.toLowerLToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.toLowerLToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.toLowerLToolStripMenuItem.Text = "ToLower(L)";
             this.toLowerLToolStripMenuItem.Click += new System.EventHandler(this.toLowerLToolStripMenuItem_Click);
             // 
             // 自動換行ToolStripMenuItem
             // 
             this.自動換行ToolStripMenuItem.Name = "自動換行ToolStripMenuItem";
-            this.自動換行ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.自動換行ToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.自動換行ToolStripMenuItem.Text = "自動換行";
             // 
             // 快選顏色ToolStripMenuItem
@@ -284,7 +318,7 @@ namespace _18_游曉雯_HomeWork
             this.藍ToolStripMenuItem,
             this.黑ToolStripMenuItem});
             this.快選顏色ToolStripMenuItem.Name = "快選顏色ToolStripMenuItem";
-            this.快選顏色ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.快選顏色ToolStripMenuItem.Size = new System.Drawing.Size(208, 34);
             this.快選顏色ToolStripMenuItem.Text = "快選顏色";
             // 
             // 紅ToolStripMenuItem
@@ -466,38 +500,6 @@ namespace _18_游曉雯_HomeWork
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // 開啟ToolStripMenuItem
-            // 
-            this.開啟ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("開啟ToolStripMenuItem.Image")));
-            this.開啟ToolStripMenuItem.Name = "開啟ToolStripMenuItem";
-            this.開啟ToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.開啟ToolStripMenuItem.Text = "開啟";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(267, 6);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(267, 6);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(267, 6);
             // 
             // Form8
             // 

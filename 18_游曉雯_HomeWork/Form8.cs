@@ -213,5 +213,30 @@ namespace _18_游曉雯_HomeWork
         {
             richTextBox1.Text = "";
         }
+
+        private void 開啟ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string mypath = openFileDialog1.FileName;
+                StreamReader sr = new StreamReader(mypath, Encoding.UTF8);
+                richTextBox1.Text = sr.ReadToEnd();
+                sr.Close();
+            };
+        }
+
+        private void 另存新檔ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            word = richTextBox1.Text;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string mysavepath = saveFileDialog1.FileName;
+                FileStream fs = new FileStream(mysavepath, FileMode.Create);
+                StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+                sw.Write(word);
+                sw.Close();
+                fs.Close();
+            }
+        }
     }
 }
