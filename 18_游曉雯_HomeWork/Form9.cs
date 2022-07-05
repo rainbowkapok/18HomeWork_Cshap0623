@@ -32,7 +32,7 @@ namespace _18_游曉雯_HomeWork
             if (e.Button == MouseButtons.Left)
             {
                 Graphics g = Graphics.FromImage(bmp);
-                Pen p = new Pen(PenColor, PenPixel);
+                Pen p = new Pen(PenColor, PenPixel);               
                 g.DrawLine(p, oldX, oldY, e.X, e.Y);//在bmp畫布上畫一條直線
                 pictureBox1.Image = bmp;// 畫布貼到pictureBox1圖片方塊控制項上
                 oldX = e.X;           // 將目前畫筆座標當作下次畫筆的起點
@@ -42,13 +42,27 @@ namespace _18_游曉雯_HomeWork
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            bmp = new Bitmap(320, 210);  //建立圖形物件大小320*210
+            bmp = new Bitmap(360, 300);  
             Graphics g = Graphics.FromImage(bmp);  // 建立畫布物件g
             PenColor = Color.Black;
-            PenPixel = 3;
-            g.Clear(Color.White);   // 將畫布清為白色
-            pictureBox1.Image = bmp;// 畫布貼到pictureBox1圖片方塊控制項上
-            pictureBox1.Refresh();  // 更新pictureBox1圖片方塊控制項
+            PenPixel = 1;
+            g.Clear(Color.White);   
+            pictureBox1.Image = bmp;
+            pictureBox1.Refresh();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            trackBar1.Minimum = 1;
+            trackBar1.Maximum = 100;           
+            label2.Text = trackBar1.Value.ToString();
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+            label2.Text = trackBar1.Value.ToString();
+            //trackBar1.Value = PenPixel;
+            trackBar1.Minimum = 1;
+            trackBar1.Maximum = 100;
+            trackBar1.TickFrequency = 1;
         }
 
         private void button1_Click(object sender, EventArgs e)
