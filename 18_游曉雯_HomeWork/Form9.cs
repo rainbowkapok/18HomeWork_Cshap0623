@@ -63,16 +63,19 @@ namespace _18_游曉雯_HomeWork
             trackBar1.Minimum = 1;
             trackBar1.Maximum = 100;
             trackBar1.TickFrequency = 1;
+            PenPixel = trackBar1.Value;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ColorDialog c = new ColorDialog();
             c.ShowDialog();
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                label1.BackColor = colorDialog1.Color;
-            }
+            label1.BackColor = c.Color;
+            PenColor = c.Color;
+            //if (colorDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    label1.BackColor = colorDialog1.Color;
+            //}
         }
     }
 }
