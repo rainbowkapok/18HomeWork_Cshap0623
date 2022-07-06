@@ -65,7 +65,19 @@ namespace _18_游曉雯_HomeWork
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Ans2.CalNum.myMoney = int.Parse(textBox1.Text);
+            Ans2.CalNum.myYear = int.Parse(textBox2.Text);
+            Ans2.CalNum.myRate = int.Parse(textBox3.Text);
+            Ans2.CalNum.myFirst = int.Parse(textBox4.Text);
+            Ans2 Pmt = new Ans2();
+            Ans2.CalNum.PMT = Pmt.Cal(Ans2.CalNum.myMoney, Ans2.CalNum.myYear, Ans2.CalNum.myRate, Ans2.CalNum.myFirst);
+            Ans2.CalNum.Total = Pmt.CalTotal(Ans2.CalNum.PMT, Ans2.CalNum.myYear);
             Form2_1 fm = new Form2_1();
+            fm.label6.Text = textBox1.Text;
+            fm.label7.Text = textBox2.Text;
+            fm.label8.Text = textBox3.Text;
+            fm.label9.Text = Ans2.CalNum.PMT.ToString();
+            fm.label10.Text = Ans2.CalNum.Total.ToString();
             fm.Show();
         }
     }
