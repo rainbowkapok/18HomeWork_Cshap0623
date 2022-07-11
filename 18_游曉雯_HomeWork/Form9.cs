@@ -48,8 +48,8 @@ namespace _18_游曉雯_HomeWork
             PenPixel = 1;
             g.Clear(Color.White);   
             pictureBox1.Image = bmp;
-            pictureBox1.Refresh();
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pictureBox1.Refresh();
+            //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; //使用 StretchImage 值會使圖像拉伸或收縮，以便適合 PictureBox
             trackBar1.Minimum = 1;
             trackBar1.Maximum = 100;           
             label2.Text = trackBar1.Value.ToString();
